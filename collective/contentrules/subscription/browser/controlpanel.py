@@ -53,10 +53,10 @@ class SubscriptionsControlPanel(BrowserView):
         for key in subscriptions.keys():
             if key in self.request.form:
                 new_values = self.request.form.get(key, [])
-                if not new_values:
-                    del subscriptions[key]
-                else:
+                if new_values:
                     subscriptions[key] = new_values
+            else:
+                del subscriptions[key]
         IStatusMessage(self.request).addStatusMessage(_(u"Subscriptions updated"), "info")
         root = self.context.portal_url()
         self.request.RESPONSE.redirect('%s/@@contentrules-subscription-controlpanel' % root)

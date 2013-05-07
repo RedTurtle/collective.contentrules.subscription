@@ -10,12 +10,13 @@
        permission="zope2.View"
        for="*"
        layer=".interfaces.IContentrulesSubscriptionLayer"/>
+       
   <browser:page
        name="contentrules-subscription-controlpanel"
        class=".controlpanel.SubscriptionsControlPanel"
        template="controlpanel.pt"
        permission="cmf.ManagePortal"
-       for="*"
+       for="Products.CMFPlone.interfaces.IPloneSiteRoot"
        layer=".interfaces.IContentrulesSubscriptionLayer"/>
 
   <!--RESOURCE REGISTRATION-->

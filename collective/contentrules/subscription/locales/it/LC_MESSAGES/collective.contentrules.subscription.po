@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2013-05-05 23:17+0000\n"
+"POT-Creation-Date: 2013-05-07 22:00+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -81,6 +81,11 @@ msgstr "Ti sei iscritto correttamente."
 #: ./browser/notify_subscribe.py:15
 msgid "You entered an invalid email address."
 msgstr "Hai inserito un indirizzo email non valido."
+
+#. Default: "The given email is already present for \"${title}\""
+#: ./tool.py:34
+msgid "already_subscribed_error"
+msgstr "L'indirizzo email fornito è già iscritto alla notifica \"${title}\""
 
 #. Default: "With this control panel you can manage all contentrules subscriptions."
 #: ./browser/controlpanel.pt:17

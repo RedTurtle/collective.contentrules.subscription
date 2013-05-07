@@ -81,4 +81,4 @@ class TestToolFunctionalities(BaseTestCase):
         result2, msg2 = tool.registerUser(action.actionUID, email)
         self.assertTrue(result)
         self.assertFalse(result2)
-        self.assertEquals(msg2, 'The given email is already present for "Test rule"')
+        self.assertEquals(msg2, 'already_subscribed_error')

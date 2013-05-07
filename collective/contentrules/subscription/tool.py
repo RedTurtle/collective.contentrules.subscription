@@ -5,6 +5,7 @@ from collective.contentrules.subscription import SUBSCRIPTION_TOOL
 from persistent.dict import PersistentDict
 from zope.component import getUtility
 from zope.schema.interfaces import IVocabularyFactory
+from collective.contentrules.subscription import subscriptionMessageFactory as _
 
 
 class Tool(UniqueObject, SimpleItem):
@@ -30,7 +31,9 @@ class Tool(UniqueObject, SimpleItem):
                                      "contentrules.subscription.vocabularies.SubscriptionRulesVocabulary")
                 vocabulary = factory(self)
                 rule_term = vocabulary.getTerm(rule_id)
-                msg = 'The given email is already present for "%s"' % rule_term.title
+                msg = _('already_subscribed_error',
+                        default='The given email is already present for "${title}"',
+                        mapping=dict(title=rule_term.title))
                 return False, msg
             else:
                 self.subscriptions[rule_id].append(email)
