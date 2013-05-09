@@ -1,7 +1,3 @@
-.. contents::
-
-Introduction
-============
 
 This product will add to Plone a new content rule, similar to the default "Send an email" ones, but email recipients are taken from a list of addresses that are subscribed for that rule.
 
@@ -11,6 +7,8 @@ Use-case
 We want to notify about some updated of the site, and we want to allows users to subscribe or not to these notifications automatically.
 
 We can do this with a contentrule registered for some object creation, and use our new action to send emails.
+
+.. contents::
 
 Setting up the rule
 ===================
@@ -63,8 +61,10 @@ Requirements
 
 This product has been tested on:
 
+* Plone 4.0
 * Plone 4.1
 * Plone 4.2
+* Plone 4.3
 
 Authors
 =======
