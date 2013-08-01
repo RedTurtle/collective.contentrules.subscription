@@ -12,13 +12,17 @@ from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from Products.MailHost.MailHost import MailHostError
 from smtplib import SMTPException
 from zope import schema
-from zope.app.component.hooks import getSite
 from zope.component import adapts
 from zope.component.interfaces import ComponentLookupError
 from zope.formlib import form
 from zope.interface import Interface, implements
 import traceback
 import uuid
+
+try:
+    from zope.component.hooks import getSite
+except ImportError:
+    from zope.app.component.hooks import getSite
 
 
 class IMailSubscriptionsAction(Interface):

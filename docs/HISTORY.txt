@@ -4,7 +4,7 @@ Changelog
 0.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fixed Plone 4.3 compatibility (wrong import) [naro]
 
 
 0.1.0 (2013-05-10)
